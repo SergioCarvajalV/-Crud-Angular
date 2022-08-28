@@ -10,4 +10,6 @@
 .btn-group{
   max-width: 10%;
   max-height: 20%;
+  height: fit-content;
+  margin:auto
 }
