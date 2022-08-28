@@ -1,17 +1,17 @@
 <li class="list-group-item">
-  <div class="row">
-    <div class="col-1">
-      <input type="checkbox" [checked]="item.completed">
+  <div class="row" >
+    <div class="col-1" >
+      <input type="checkbox" [checked]="item.completed" (change)="onToggle(item)">
     </div>
-    <div class="col-3">
+    <div class="col-3"  [ngClass]="{ 'completed':item.completed }">
       {{item.name}}
     </div>
-    <div class="col-6">
+    <div class="col-6"  [ngClass]="{ 'completed':item.completed }">
       {{item.description}}
     </div>
     <div class="btn-group col-2" role="group" aria-label="Basic mixed styles example">
       <button type="button" class="btn btn-success">Editar</button>
-      <button type="button" class="btn btn-danger">Eliminar</button>
+      <button type="button" class="btn btn-danger" (click)="onDelete(item)">Eliminar</button>
     </div>
   </div>
 </li>

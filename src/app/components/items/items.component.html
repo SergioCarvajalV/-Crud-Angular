@@ -3,6 +3,10 @@
     Todo list
   </div>
   <ul class="list-group list-group-flush">
-    <app-item *ngFor="let item of items" [item]="item"></app-item>
+    <app-item
+      *ngFor="let item of items"
+      [item]="item"
+      (deleteItem)="deleteItem($event)">
+    </app-item>
   </ul>
 </div>

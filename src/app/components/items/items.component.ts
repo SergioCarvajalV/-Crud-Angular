@@ -15,9 +15,13 @@ export class ItemsComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      { id: 1, name: 'Item 1', description: '1 description', completed: false },
+      { id: 1, name: 'Item 1', description: '1 description', completed: true },
       { id: 2, name: 'Item 2', description: '2 description', completed: false },
     ]
+  }
+
+  deleteItem(item: Item) {
+    this.items = this.items.filter(i => i.id !== item.id);
   }
 
 }
