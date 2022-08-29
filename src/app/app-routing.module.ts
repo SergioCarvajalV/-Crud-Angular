@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddItemComponent } from './components/add-item/add-item.component';
 import { ItemsComponent } from './components/items/items.component';
 
 const routes: Routes = [
@@ -8,10 +7,6 @@ const routes: Routes = [
     path:'',
     component: ItemsComponent,
   },
-  {
-    path:'crear',
-    component: AddItemComponent,
-  }
 ];
 
 @NgModule({

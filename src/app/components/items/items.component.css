@@ -3,3 +3,9 @@
   margin-top: auto;
   max-width: 100%;
 }
+
+.btn{
+  width: -webkit-fill-available;
+  margin-left: 5%;
+  margin-right: 5%;
+}
