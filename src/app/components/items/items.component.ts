@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Item } from '../../models/item';
+import { ItemService } from '../../services/item.service';
 
 @Component({
   selector: 'app-items',
@@ -11,17 +12,17 @@ export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
 
-  constructor() { }
+  constructor(private itemService:ItemService) { }
 
   ngOnInit(): void {
-    this.items = [
-      { id: 1, name: 'Item 1', description: '1 description', completed: true },
-      { id: 2, name: 'Item 2', description: '2 description', completed: false },
-    ]
+
+    this.items = this.itemService.getItems();
   }
 
   deleteItem(item: Item) {
     this.items = this.items.filter(i => i.id !== item.id);
   }
-
+  lengthItems(){
+   this.items.length;
+  }
 }

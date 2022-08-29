@@ -1,26 +1,30 @@
 <div class="modal fade" id="modalCrearItem" tabindex="-1" aria-labelledby="modalCrearItem" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="modalCrearItem">Crear item</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Titulo:</label>
-                <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="mb-3">
-                <label for="message-text" class="col-form-label">Descripcion:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-            </div>
-            </form>
-        </div>
-        <div class="modal-footer">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="modalCrearItem">Crear item</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="id-text" class="col-form-label">ID:</label>
+            <input type="text" class="form-control" id="id-text" name="id" [(ngModel)]="id">
+          </div>
+          <div class="mb-3">
+              <label for="titulo-text" class="col-form-label">Titulo:</label>
+              <input type="text" class="form-control" id="titulo-text" name="name" [(ngModel)]="name">
+          </div>
+          <div class="mb-3">
+              <label for="descripcion-text" class="col-form-label">Descripcion:</label>
+              <textarea class="form-control" id="descripcion-text" name="description" [(ngModel)]="description"></textarea>
+          </div>
+          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Crear</button>
-        </div>
-        </div>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Crear</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
